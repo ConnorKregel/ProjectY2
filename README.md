@@ -9,7 +9,18 @@ pages
 accounts
 products
 cart
-order
-bootstrap
+order history 
 password change and reset
 permissions
+databases
+json
+images and images upload
+search function
+sign up, log in and log out
+stripe
+thank you pages
+confirmation emails
+vouchers 
+designing the pages / bootstrap
+admin
+unit testing
