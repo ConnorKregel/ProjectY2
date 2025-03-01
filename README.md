@@ -2,20 +2,23 @@ Cameron Delaney (x00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
-need to add pillow, bootstrap and all that shite to setting.py
+ripped work from lab 10, lab 6 part 3 and lab 2
+havent ran it at all
+wont work anyway
+havent made a superuser yet
+love yall x0x0x
 
-
-pages
-accounts
+pages (started)
+accounts (started)
 products
-cart
+cart (started)
 order history 
 password change and reset
 permissions
 databases
 json
-images and images upload
-search function
+images and images upload (started)
+search function (started)
 sign up, log in and log out
 stripe
 thank you pages
