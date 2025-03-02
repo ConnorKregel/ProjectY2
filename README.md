@@ -2,9 +2,10 @@ Cameron Delaney (x00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
+install bootsrtap, forms and pillow 
+
 ripped work from lab 10, lab 6 part 3 and lab 2
-havent ran it at all
-wont work anyway
+cant runserver due to some wsgi issue?
 havent made a superuser yet
 love yall x0x0x
 
