@@ -42,6 +42,8 @@ INSTALLED_APPS = [
     'accounts',
     'search_app',
     'shop',
+    'pages',
+    'products',
     #third party apps
     'crispy_forms',
     'crispy_bootstrap5',
@@ -55,8 +57,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    #something for middleware 
-    'middleware.no_cache.NoCacheMiddleWare',
 ]
 
 ROOT_URLCONF = 'off_License_Store.urls'
@@ -64,7 +64,7 @@ ROOT_URLCONF = 'off_License_Store.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [str(BASE_DIR.joinpath('templates'))],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
