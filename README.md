@@ -4,10 +4,10 @@ Daniel Luns (X00215401)
 
 install bootsrtap, forms and pillow 
 
+run makemigrations to access admin cateogry and products
+dont upload if dont fully work
+
 ripped work from lab 10, lab 6 part 3 and lab 2
-cant runserver due to some wsgi issue?
-havent made a superuser yet
-havent migrated and made migrations either
 love yall x0x0x
 
 pages (started)
