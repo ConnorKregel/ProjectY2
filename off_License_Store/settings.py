@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'shop',
     'pages',
     'products',
+
     #third party apps
     'crispy_forms',
     'crispy_bootstrap5',
@@ -73,9 +74,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 #something for the shop
-                'shop.context_processors.menu_links',
-                #something for the cart
-                'cart.context_processors.counter',
+                
             ],
         },
     },
