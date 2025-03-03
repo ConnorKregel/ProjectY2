@@ -4,28 +4,25 @@ Daniel Luns (X00215401)
 
 install requirements.txt 
 
-run makemigrations shop and migrate to access admin category and products
-dont upload if dont fully work
-
 ripped work from lab 10, lab 6 part 3 and lab 2
 love yall x0x0x
 
 pages (started)
 accounts (started)
-products
+products (started)
 cart (started)
 order history 
 password change and reset
-permissions
+permissions (started)
 databases
 json
 images and images upload (started)
 search function (started)
-sign up, log in and log out
+sign up, log in and log out (started)
 stripe
 thank you pages
 confirmation emails
 vouchers 
 designing the pages / bootstrap
-admin
+admin (started)
 unit testing
