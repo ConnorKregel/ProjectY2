@@ -2,9 +2,9 @@ Cameron Delaney (x00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
-install bootsrtap, forms and pillow 
+install requirements.txt 
 
-run makemigrations to access admin cateogry and products
+run makemigrations shop and migrate to access admin category and products
 dont upload if dont fully work
 
 ripped work from lab 10, lab 6 part 3 and lab 2
