@@ -76,7 +76,7 @@ TEMPLATES = [
                 'django.contrib.messages.context_processors.messages',
                 'shop.context_processors.menu_links',
                 'cart.context_processors.counter',
-                #something for the shop
+                
                 
             ],
         },
