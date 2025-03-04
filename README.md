@@ -1,11 +1,14 @@
+Members 
+-
 Cameron Delaney (x00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
+What to do
+-
 install requirements.txt 
-love yall x0x0x
 
-started 
+Started 
 - 
 pages (started)
 accounts (started)
