@@ -42,7 +42,7 @@ INSTALLED_APPS = [
     'accounts',
     'search_app',
     'shop',
-    'pages',
+    
     'products',
 
     #third party apps
