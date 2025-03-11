@@ -156,3 +156,6 @@ AUTH_USER_MODEL = 'accounts.CustomUser'
 #regarding bootstrap which hasnt been sone yet
 CRISPY_ALLOWED_TEMPLATE_PACKS = 'bootstrap5'
 CRISPY_TEMPLATE_PACK = 'bootstrap5'
+
+LOGIN_REDIRECT_URL = 'shop:all_products'
+LOGOUT_REDIRECT_URL = 'shop:all_products'
