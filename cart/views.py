@@ -171,7 +171,7 @@ def create_order(request):
                 empty_cart(request)
             except Exception as e:
                 return redirect("shop:all_products")
-        return redirect("shop:all_products")
+        return redirect("order:thanks", order_details.id)
     
     except ValueError as ve:
         return redirect("shop:all_products")

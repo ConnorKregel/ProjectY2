@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}
+Thanks
+{% endblock %}
+{% block content %}
+    <div>
+        <div class="text-center">
+            <br>
+            <br>
+            <h1 class = 'text-center my_title'>thanks for placing your order</h1>
+            <br>
+            <br>
+            <p> your order number is <b>{{ customer_order.id }}</b></p>
+            <br>
+            <p>we have recieved your order and will begin processing it soon</p>
+        </div>
+    </div>
+{% endblock %}
