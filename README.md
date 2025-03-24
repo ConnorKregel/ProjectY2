@@ -19,16 +19,16 @@ images and images upload (started)
 search function (started)
 sign up, log in and log out (started)
 admin (started)
+stripe (started)
+order history (started)
+thank you pages (started)
 
 next 
 - 
 unit testing
 designing the pages / bootstrap
-stripe
-order history 
 password change and reset
 databases
 json
-thank you pages
 confirmation emails
 vouchers 
