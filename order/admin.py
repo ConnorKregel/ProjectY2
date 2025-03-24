@@ -2,7 +2,7 @@ from django.contrib import admin
 from .models import Order, OrderItem
 # Register your models here.
 
-class OrderItemInline(admin.TabularInline):
+class OrderItemAdmin(admin.TabularInline):
     model = OrderItem
     fieldsets = [
         ('Product',{'fields':['product'],}),
@@ -10,6 +10,8 @@ class OrderItemInline(admin.TabularInline):
         ('Price',{'fields':['price'],}),
     ]
     readonly_fields = ['product', 'quantity', 'price']
+    can_delete = False
+    max_num = 0 
 
 class OrderAdmin(admin.ModelAdmin):
     list_display = ['id', 'billingName','emailAddress', 'created']
@@ -19,8 +21,9 @@ class OrderAdmin(admin.ModelAdmin):
     fieldsets = [
         ('ORDER INFORMATION', {'fields':['id', 'token', 'total', 'created']}),
         ('BILLING INFORMATION', {'fields':['billingName', 'billingAddress1', 'billingCity', 'billingPostcode', 'billingCountry']}),
-        ('SHIPPING INFORMATION', {'fields':['shippingName', 'shippingAddress1', 'shippingCity', 'shippingPostcode', 'shippingCountry']}),]
-    inlines = [OrderItemInline]
+        ('SHIPPING INFORMATION', {'fields':['shippingName', 'shippingAddress1', 'shippingCity', 'shippingPostcode', 'shippingCountry']}),
+        ]
+    inlines = [OrderItemAdmin]
 
     def has_delete_permission(self, request, obj = None):
         return False

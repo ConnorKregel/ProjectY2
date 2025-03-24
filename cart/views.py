@@ -41,7 +41,7 @@ def cart_detail(request, total=0, counter=0, cart_items = None):
         pass
     stripe.api_key = settings.STRIPE_SECRET_KEY
     stripe_total = int(total * 100)
-    description = 'Off License Store '
+    description = 'Off License Store'
     if request.method == 'POST':
         try:
             checkout_session = stripe.checkout.Session.create(
@@ -107,10 +107,9 @@ def empty_cart(request):
 
 def create_order(request):
     try: 
-        session_id = request.GET['session_id']
+        session_id = request.GET.get['session_id']
         if not session_id:
             raise ValueError('No session_id found')
-        
         try:
             session = stripe.checkout.Session.retrieve(session_id)
         except StripeError as e:
@@ -129,7 +128,7 @@ def create_order(request):
             order_details = Order.objects.create(
                 token=session_id,
                 total=session.amount_total / 100,
-                emailAddress=session.customer_email,
+                emailAddress=customer_details.email,
                 billingName=billing_name,
                 billingAddress1=billing_address.line1,
                 billingCity=billing_address.city,
@@ -167,14 +166,10 @@ def create_order(request):
                 product = Product.objects.get(id=item.product.id)
                 product.stock = int(item.product.stock - item.quantity)
                 product.save()
-                product.save()
                 empty_cart(request)
             except Exception as e:
                 return redirect("shop:all_products")
         return redirect("order:thanks", order_details.id)
-    
-    except ValueError as ve:
-        return redirect("shop:all_products")
 
     except ValueError as ve:
         print(f"Error: {ve}")

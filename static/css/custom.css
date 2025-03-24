@@ -62,5 +62,13 @@
 }
 
 .my_custom_button {
-    margin-top: 5px;
-}
+    background-color: #6772e5 !Important;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    margin-bottom: 10px;
+    }
