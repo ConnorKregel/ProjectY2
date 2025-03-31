@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% load static %}
+
 {% block title %}
     Order History
 {% endblock %}
+
 {% block content %}
-    <div>
-        <div class="text-center">
+<div>
+    <div class="text-center">
         <br>
         <h1 class="text-center my_title">Order History</h1>
         <br>
@@ -26,17 +28,24 @@
                     <td>{{ order.id }}</td>
                     <td>{{ order.created|date:"d M Y" }}</td>
                     <td>{{ order.total }}</td>
-                    <td><i class="fas fa-check"></i>&nbsp;Complete</td>
-                    <td><a href="{% url 'order:order_detail' order.id %}">View order</a></td>
+                    <td>
+                        <i class="fas fa-check"></i>&nbsp;Complete
+                    </td>
+                    <td>
+                        <a href="{% url 'order:order_detail' order.id %}">View order</a>
+                    </td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
         {% else %}
-            <p>You have not placed any orders yet.<br><br><a href="{% url 'shop:all_products' %}"class="btn btn-secondary">Continue shopping</a></p>
-            {% endif %}
-        </div>
+        <p>
+            You have not placed any orders yet.<br><br>
+            <a href="{% url 'shop:all_products' %}" class="btn btn-secondary">Continue shopping</a>
+        </p>
+        {% endif %}
     </div>
-    <br>
-    <br>
+</div>
+<br>
+<br>
 {% endblock %}
