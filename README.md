@@ -1,6 +1,6 @@
 Members 
 -
-Cameron Delaney (x00207491)
+Cameron Delaney (X00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
@@ -22,13 +22,13 @@ admin (started)
 stripe (started)
 order history (started)
 thank you pages (started)
+confirmation emails (started)
+password change and reset (started)
 
 next 
 - 
 unit testing
 designing the pages / bootstrap
-password change and reset
 databases
 json
-confirmation emails
 vouchers 
