@@ -141,13 +141,12 @@ def empty_cart(request):
 
 def create_order(request):
     """Create an order after successful payment."""
-    discount =0
-    voucher_id =0
-    new_total =0
-    voucher = None
     try:
         # Retrieve session ID from the request
         session_id = request.GET.get('session_id')
+        cart_total = request.GET.get('cart_total')
+        voucher_id = request.GET.get('voucher_id')
+        
         if not session_id:
             raise ValueError('No session_id found in the request.')
 
@@ -197,6 +196,14 @@ def create_order(request):
         except ObjectDoesNotExist:
             print("Cart or cart items do not exist.")
             return redirect("shop:all_products")
+        
+        voucher = get_object_or_404(Voucher, id=voucher_id)
+        if voucher != None:
+            order_details.voucher = voucher
+            cart_total = Decimal(cart_total)
+            order_details.discount = cart_total*(voucher.discount/Decimal('100'))
+            order_details.total = (cart_total-order_details.discount)
+            order_details.save()
 
         # Process cart items and create order items
         for item in cart_items:
@@ -211,6 +218,12 @@ def create_order(request):
                 product = Product.objects.get(id=item.product.id)
                 product.stock -= item.quantity
                 product.save()
+                if voucher != None:
+                    discount =(oi.price*(voucher.discount/Decimal('100')))
+                    oi.price = (oi.price - discount)
+                else:
+                    oi.price = oi.price*oi.quantity
+                oi.save()
             except Exception as e:
                 print(f"Error processing cart item (Product ID: {item.product.id}): {e}")
                 return redirect("shop:all_products")
