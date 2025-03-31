@@ -208,7 +208,7 @@ def create_order(request):
         # Process cart items and create order items
         for item in cart_items:
             try:
-                OrderItem.objects.create(
+                oi = OrderItem.objects.create(
                     product=item.product.name,
                     quantity=item.quantity,
                     price=item.product.price,
