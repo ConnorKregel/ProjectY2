@@ -1,6 +1,6 @@
 Members 
 -
-Cameron Delaney (x00207491)
+Cameron Delaney (X00207491)
 Connor Kregel (X00211538)
 Daniel Luns (X00215401)
 
