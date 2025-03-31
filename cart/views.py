@@ -192,11 +192,6 @@ def create_order(request):
 
         # Empty the cart after order creation
         empty_cart(request)
-        cart = Cart.objects.get(cart_id=_cart_id(request))
-        cart_items = CartItem.objects.filter(cart=cart, active=True)
-        cart_items.delete()
-        cart.delete()
-        
 
         # Redirect to the thank you page
         return redirect("order:thanks", order_details.id)
