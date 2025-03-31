@@ -22,7 +22,6 @@ class orderHistory(LoginRequiredMixin, View):
             print(f"Orders retrieved for {email}: {order_details}")
         return render(request, 'order_list.html', {'order_details': order_details})
 
-
 class orderDetail(LoginRequiredMixin, View):
     """Displays the details of a specific order for a logged-in user."""
     def get(self, request, order_id):
