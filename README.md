@@ -24,11 +24,10 @@ order history (started)
 thank you pages (started)
 confirmation emails (started)
 password change and reset (started)
+vouchers (started)
 
 next 
 - 
 unit testing
 designing the pages / bootstrap
-databases
-json
-vouchers 
+
