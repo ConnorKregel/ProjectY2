@@ -25,7 +25,9 @@
     {% endif %}
     <div class="text-center">
         {% if category %}
+            {% if category.image %}
             <img class="my_image" src="{{category.image.url}}" alt="{{category.name}}">
+            {% endif %}
         </div>
         <br>
         <div>
@@ -48,9 +50,11 @@
             {% for product in prods %}
                 <div class="my_bottom_margin col-9 col-lg-4 col-sm-12 col-md-4">
                     <div class="card text-center" style="min-width:18rem;">
+                    {% if product.image %}
                         <a class ="img" href="{{product.get_absolute_url}}"><img class="card-img-top      
                           my_image"src="{{product.image.url}}" alt="{{product.name}}"></a>
-                        <div class="card-body">
+                    {% endif %}
+                          <div class="card-body">
                             <h4>{{product.name}}</h4>
                             <p>€{{product.price}}</p>
                         </div>
