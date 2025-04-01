@@ -7,10 +7,6 @@
     margin-bottom: 20px !important;
 }
 
-.my_top_navbar_div {
-    height: 60px;
-    line-height: 50px;
-}
 
 .my_custom_menu {
     text-align: right !important;
@@ -72,3 +68,6 @@
     width: 100%;
     margin-bottom: 10px;
     }
+.my_image {
+    text-align: center;
+}
