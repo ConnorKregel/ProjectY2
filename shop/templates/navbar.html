@@ -19,16 +19,17 @@
         <li class="nav-item">
           <a class="nav-link" href="{% url 'cart:cart_detail' %}">Your Cart</a>
         </li>
-
-        <li class="nav-item">
-          <a class="nav-link" href="{% url 'contact:contact' %}">contact</a>
-        </li>
         
         {% if item_count > 0 %}
         <li class="nav_item">
           <a class="nav-link" href="{% url 'cart:cart_detail' %}"><i class ='fas fa-shopping-cart'>({{item_count}})</i></a>
         </li>
-        {% endif %}    
+        {% endif %}
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'contact:contact' %}">Contact Us</a>
+        </li>
+
       </ul>
       
       <div class="dropdown-menu dropdown-menu-right">
@@ -44,7 +45,7 @@
     </div>
       <!-- search bar -->
       <form class="d-flex" action="{% url 'search_app:searchResult' %}" method="get">
-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="q">
+        <input class="form-control" type="search" placeholder="Search" aria-label="Search" name="q" style="width: 300px;">
         <button class="btn btn-secondary" type="submit">Search</button>
       </form>
 
