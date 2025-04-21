@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'products',
     'order',
     'vouchers',
+    'contact',
     #third party apps
     'crispy_forms',
     'crispy_bootstrap5',
@@ -162,3 +163,7 @@ LOGOUT_REDIRECT_URL = 'shop:all_products'
 
 STRIPE_PUBLIC_KEY = 'pk_test_51QKMtjCYK4z5isXzBbnSN8rFwphNAqiVUXnoAzwWttYjn7aqBX1SrFdQw87L5y9rJfmyGWl87y21U08Jtqr3P3hJ00ASNuuevq'
 STRIPE_SECRET_KEY = 'sk_test_51QKMtjCYK4z5isXzt1nMMW1mzoDVX7svaKHolcA7HeOtsaoy4HBIRVPfvIm9yB0rM6G70MG8PKXsmNHmlGSv3fZ400gR7rzzJP'
+
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+DEFAULT_FROM_EMAIL = 'off_License_Store <noreply@off_license_store.com>'
+NOTIFY_EMAIL = 'off_License_Store <noreply@off_license_store.com>'
