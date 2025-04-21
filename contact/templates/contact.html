@@ -1,8 +1,31 @@
-<h1>Contact us</h1>
-<form method="post">
-    {% csrf_token %}
-    {{ form }}
-    <div class = "form-actions">
-        <button type = "submit">Send</button>
+{%extends "base.html"%}
+{% load static %}
+
+{% block title %}
+Contact Us!
+{% endblock %}
+
+{% block content %}
+<div>
+    <div class="text-center">
+        <br>
+        <h1 class="text-center my_title">Contact us!!</h1>
+        <br>
+        <p>Please if you have any issues, dont be hesitance to contact us for an out of stock item or a shipping address issue</p>
+        <form method="post">
+            {% csrf_token %}
+            <div class="mb-3">
+                {{ form.as_p }}
+            </div>
+            <div class="form-actions text-center">
+                <button type="submit" class="btn btn-primary">Send</button>
+            </div>
+        </form>
     </div>
-</form>
+</div>
+{% endblock %}
+
+
+
+
+
