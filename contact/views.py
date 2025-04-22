@@ -1,5 +1,5 @@
 from django.conf import settings
-from django.shortcuts import reverse
+from django.shortcuts import reverse, render
 from django.views.generic import TemplateView, FormView
 from django.core.mail import send_mail
 from .forms import ContactForm
@@ -28,3 +28,6 @@ class ContactView(FormView):
         )
         
         return super(ContactView, self).form_valid(form)
+        
+def faq(request):
+    return render(request, 'faq.html')

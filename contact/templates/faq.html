@@ -1,0 +1,60 @@
+{%extends "base.html"%}
+{% load static %}
+
+{% block title %}
+Frequently Asked Questions
+{% endblock %}
+
+{% block content %}
+
+<!-- css to design the table   -->
+<style>
+    table, th, td {
+      border:1px solid black;
+      padding: 35px;
+    }
+</style>
+
+<div>
+    <div class="text-center">
+        <br>
+        <h1 class="text-center my_title">Frequently Asked Questions</h1>
+        <br>
+        <p>These are our Frequently Asked Questions!</p>
+        <table style = "width:100%">
+            <tr>
+                <th>Question</th>
+                <th>Answer</th>
+            </tr>
+            <tr>
+                <td>Who are we?</td>
+                <td>Hey there, we are the online off license. we run a local website for the commuinty of dublin.</td>
+            </tr>
+            <tr>
+                <td>How do I contact customer service?</td>
+                <td>If you want to contact our wonderful customer service support team, please click the 'Contact Us' button on the top of the webpage, just beside the Cart Button!</td>
+            </tr>
+            <tr>
+                <td>If there is no stock, what should I do?</td>
+                <td>Running out of stock is a common thing that happens, if it happens to a product that you are looking for, please wait 3-5 business days to the product to be restocked.</td>
+            </tr>
+            <tr>
+                <td>How long should I have to wait for delivery?</td>
+                <td>An estimated delivery should take 1-2 business days regarding the weather, location of delivery and if it happened to be bought closer to a weekend</td>
+            </tr>
+            <tr>
+                <td>Is there a minimum delivery fee?</td>
+                <td>We are happy to say that we do free delivery accross dublin city, as we hopefully expand across the nation, we will have to add a delivery fee to each order.</td>
+            </tr>
+            <tr>
+                <td>How do I cancel my order or make changes to it?</td>
+                <td>Needing to cancel or make changes to your order happens all the time, just go on over to over contact page, include all the relative information such as your email, address and order number and we will be in contact with you as soon as possible.</td>
+            </tr>
+            <tr>
+                <td>Can I do click and collect?</td>
+                <td>Unfortunately we do not a a physical location yet but hopefully in the future, we would be able to open a location where you can come, have a look a products and new products and be able to ask question face to face.</td>
+            </tr>
+        </table>
+    </div>
+</div>
+{% endblock %}
