@@ -25,9 +25,9 @@ STATIC_VERSION = str(int(time.time()))
 SECRET_KEY = 'django-insecure-$&i9^2@^mxtbvyj&476j_2d2hk88te)pjzyqpuif(q6)^zc6d#'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['danielluns.pythonanywhere.com']
 
 
 # Application definition
