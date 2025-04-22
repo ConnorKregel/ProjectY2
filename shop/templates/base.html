@@ -25,13 +25,13 @@
 <!-- automatic age verify popup  -->
     <script>
     function myFunction() {
-      var txt;
-      if (confirm("Hi there!, By pressing 'Ok' you are agreeing that you are 18 years or older to be on the Webpage")) {
-        txt = "OK!";
-      } else {
-        txt = window.location.replace("https://www.google.com/");
+      if (!localStorage.getItem('ageVerified')) {
+        if (confirm("Hi there! By pressing 'Ok' you are agreeing that you are 18 years or older to be on the webpage.")) {
+            localStorage.setItem('ageVerified', 'true');
+        } else {
+            window.location.replace("https://www.google.com/");
+        }
       }
-      document.getElementById("demo").innerHTML = txt;
     }
 
     myFunction();
