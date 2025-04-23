@@ -15,6 +15,7 @@
               {% endfor %}
             </ul>
           </li>
+        
           <!-- cart button -->
         <li class="nav-item">
           <a class="nav-link" href="{% url 'cart:cart_detail' %}">Your Cart</a>
@@ -26,17 +27,19 @@
         </li>
         {% endif %}
         
+        <!-- cart button -->
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact:contact' %}">Contact Us</a>
         </li>
-
+        
+        <!-- cart button -->
         <li class="nav-item">
           <a class="nav-link" href="{% url 'contact:FAQ' %}">FAQ</a>
         </li>
 
       </ul>
       
-      <div class="dropdown-menu dropdown-menu-right">
+      <div class="dropdown-menu dropdown-menu-end">
         <!-- Sign out form with proper styling -->
         <form method="post" action="{% url 'logout' %}">
             {% csrf_token %}
@@ -63,7 +66,7 @@
             <a href="#" class="dropdown-toggle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 {{ user.username }} <i class="fas fa-user-circle"></i>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">
+            <div class=" dropdown-menu dropdown-menu-end">
                 <!-- Sign out form with proper styling -->
                 <form method="post" action="{% url 'logout' %}">
                     {% csrf_token %}
@@ -73,8 +76,8 @@
                 </form>
                 <!-- change password -->
 
-                <a href="{%url 'password_change'%}" class="dropdown-item">Change Password</a>
-                <a href="{%url 'order:order_list' %}" class="dropdown-item">order history</a>
+                <a href="{% url 'password_change' %}" class="dropdown-item">Change Password</a>
+                <a href="{% url 'order:order_list' %}" class="dropdown-item">order history</a>
             </div>
         </li>
         {% else %}
