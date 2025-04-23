@@ -1,8 +1,9 @@
+from django.contrib.auth.views import PasswordChangeView
 from django.views.generic.edit import CreateView
 from django.contrib.auth import login
 from django.contrib.auth.models import Group
 from django.urls import reverse_lazy
-from .forms import CustomUserCreationForm
+from .forms import CustomUserCreationForm, CustomPasswordChangeForm
 from .models import CustomUser
 
 class SignUpView(CreateView):
@@ -23,3 +24,8 @@ class SignUpView(CreateView):
         login(self.request, self.object)
 
         return response  # Redirect to success URL
+    
+class ChangePasswordView(PasswordChangeView):
+    template_name = 'registration/password_change_form.html'
+    form_class = CustomPasswordChangeForm
+    success_url = reverse_lazy('shop:all_products')
