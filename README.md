@@ -8,26 +8,5 @@ What to do
 -
 install requirements.txt 
 
-Started 
+Project for 2nd year Software Engineering
 - 
-pages (started)
-accounts (started)
-products (started)
-cart (started)
-permissions (started)
-images and images upload (started)
-search function (started)
-sign up, log in and log out (started)
-admin (started)
-stripe (started)
-order history (started)
-thank you pages (started)
-confirmation emails (started)
-password change and reset (started)
-vouchers (started)
-
-next 
-- 
-unit testing
-designing the pages / bootstrap
-
